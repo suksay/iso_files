@@ -1,0 +1,24 @@
+
+Content-Type: multipart/mixed; boundary="==BOUNDARY=="
+MIME-Version: 1.0
+
+--==BOUNDARY==
+Content-Type: text/cloud-boothook; charset="us-ascii"
+
+#cloud-boothook
+!
+vpn 0
+ interface eth0
+  ip address 192.168.10.40/24
+  no shutdown
+ !
+ ip route 0.0.0.0/0 10.217.16.65
+!
+vpn 512
+ interface eth1
+  ip address 192.168.10.41/24
+  shutdown
+ !
+ ip route 0.0.0.0/0 57.77.39.65
+!
+--==BOUNDARY==
