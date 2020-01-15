@@ -18,18 +18,13 @@ vpn 0
   ip address 192.168.10.60/24
   no shutdown
  !
- interface eth1
-  ip address 192.168.10.63/24
-  no shutdown
- !
- ip route 0.0.0.0/0 10.217.16.65
- ip route 0.0.0.0/0 57.77.39.65
+ ip route 0.0.0.0/0 192.168.10.254
 !
 vpn 512
  interface eth2
   ip address 192.168.10.61/24
   no shutdown
  !
- ip route 0.0.0.0/0 10.217.16.1
+ ip route 0.0.0.0/0 192.168.10.254
 !
 --==BOUNDARY==
